@@ -1,6 +1,6 @@
 # WeatherVU
 
-<img src="https://raw.githubusercontent.com/avunit1/ExRunner/main/github.png">
+<img src="https://raw.githubusercontent.com/avunit1/WeatherVU/refs/heads/main/sun.png">
 
 WeatherVU is a personal project, a basic weather app designed in 2 hours in HTML, CSS and JS.
 
