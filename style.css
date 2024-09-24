@@ -105,12 +105,12 @@ body {
 
 .square h2 {
     margin: 0;
-    font-size: 40px; /* Title font size */
+    font-size: 25px; /* Title font size */
     font-weight: bolder;
 }
 
 .square p {
-    font-size: 40px; /* Text font size */
+    font-size: 25px; /* Text font size */
     margin: 10px 0 0; /* Margin for text */
     font-weight: bolder;
 }
