@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('roboto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', Arial, sans-serif; /* Apply custom font */
+}
+
+body, html {
+    height: 100%;
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Background color set to black */
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for loading spinner */
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF; /* White border for the spinner */
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    position: relative; /* Allow absolute positioning of squares */
+    display: flex;
+    justify-content: space-between;
+    width: 95%; /* Width of the container */
+    height: 95%; /* Height of the container */
+    gap: 20px; /* Increased the gap between squares */
+}
+
+.square {
+    position: absolute; /* Positioning squares absolutely */
+    width: 49%; /* Reduced width to add spacing */
+    height: 48%; /* Reduced height to add spacing */
+    background-color: white; /* White background for each square */
+    border-radius: 20px; /* Rounded corners */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    flex-direction: column; /* Keep text in column order (h2 and p) */
+    text-align: center; /* Center text inside the squares */
+    padding: 20px; /* Padding inside squares */
+    opacity: 0; /* Start with transparent */
+    animation: fadeIn 0.5s linear forwards; /* Fade in animation */
+}
+
+
+#temperature {
+    top: 0;
+    left: 0;
+}
+
+#precipitation {
+    top: 0;
+    right: 0;
+}
+
+#humidity {
+    bottom: 0;
+    left: 0;
+}
+
+#wind {
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.square h2 {
+    margin: 0;
+    font-size: 40px; /* Title font size */
+    font-weight: bolder;
+}
+
+.square p {
+    font-size: 40px; /* Text font size */
+    margin: 10px 0 0; /* Margin for text */
+    font-weight: bolder;
+}
